@@ -135,7 +135,7 @@ function Opening({ closeTime }) {
   return (
     <div className="order">
       <p>
-        We are currently Open! Till {closeTime}:00. Come visit us or order.
+        We are currently Open! Till {closeTime}:59. Come visit us or order.
         online!
       </p>
       <button className="btn">Order</button>
@@ -146,7 +146,7 @@ function Opening({ closeTime }) {
 function IsOpen({ openTime, closeTime }) {
   return (
     <p>
-      COME BACK LATER BETWEEN {openTime}:00 - {closeTime}:00 :)
+      COME BACK LATER BETWEEN {openTime}:00 - {closeTime}:59 :)
     </p>
   );
 }
@@ -154,7 +154,7 @@ function IsOpen({ openTime, closeTime }) {
 function Footer({ menu }) {
   const hour = new Date().getHours();
   const openTime = "12";
-  const closeTime = "24";
+  const closeTime = "23";
   const isOpen = hour >= openTime && hour <= closeTime;
 
   return (
